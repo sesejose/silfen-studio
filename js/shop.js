@@ -14,13 +14,14 @@ function handleShop(data) {
   data.forEach(showBag);
 }
 
+const template = document.querySelector("#cartTemplate").content;
+
 function showBag(bag) {
   console.log(bag);
-  const template = document.querySelector("#cartTemplate").content;
   const copy = template.cloneNode(true);
   copy.querySelector(".bag-name").textContent = bag.title.rendered;
   copy.querySelector(".bag-price").textContent = bag.price;
-  document.querySelector("a").style.backgroundImage = bag._embedded.thumb1.guid;
+  document.querySelector("a").style.backgroundImage = "url('bag.thumb1.guid')";
   // copy.querySelector(".class").textContent = bag.price;
   // copy.querySelector(".class").src = bag.imageurl;
   copy
