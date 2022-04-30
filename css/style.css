@@ -1063,12 +1063,12 @@ a.product-img-container:link,
 a.product-img-container:visited,
 a.product-img-container:active,
 a.product-img-container:focus {
-  background-image: url("../images/image.jpg");
+  /* background-image: url("../images/image.jpg"); */
   cursor: pointer;
 }
 
 a.product-img-container:hover {
-  background-image: url("../images/hover-image.png");
+  /* background-image: url("../images/hover-image.png"); */
 }
 
 .product-img-container {
@@ -1865,12 +1865,12 @@ footer ul {
   a.product-img-container:visited,
   a.product-img-container:active,
   a.product-img-container:focus {
-    background-image: url("../images/image.jpg");
+    /* background-image: url("../images/image.jpg"); */
     cursor: pointer;
   }
 
   a.product-img-container:hover {
-    background-image: url("../images/hover-image.png");
+    /* background-image: url("../images/hover-image.png"); */
   }
 
   .product-img-container {
