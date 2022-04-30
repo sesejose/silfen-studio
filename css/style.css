@@ -1,0 +1,1944 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+/*font-family: 'Manrope', sans-serif;*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*font-family: 'Roboto', sans-serif;*/
+
+:root {
+  --font-h: "Manrope", sans-serif;
+  --font-t: "Roboto", sans-serif;
+  --font-sm: 0.85rem;
+  --black: #000000;
+  --blue: #dde9f3;
+  --green: #d2e9d9;
+  --yellow: #edef9c;
+  --white: #ffffff;
+
+  --m: 1rem;
+  --ms: 0.5rem;
+  --p: 1rem;
+  --p-large: 1.5rem 3rem;
+  --ps: 0.5rem;
+  --mtb: 1rem 0;
+  --mtb-large: 2rem 0;
+  --mlr: 0 1rem;
+  --ml: 0 0 0 1rem;
+  --mr: 0 1rem 0 0;
+  --mb: 0 0 1rem 0;
+  --mt: 1rem 0 0 0;
+  --ptb: 1rem 0;
+  --ptb-large: 6rem 0;
+  --ptb-medium: 3rem 0;
+  --plr: 0 1rem;
+  --pl: 0 0 0 1rem;
+  --pr: 0 1rem 0 0;
+  --border-radius-10: 10px;
+  --border-radius-100: 100px;
+  /* --bg-gray-200: background-color: #efefef; */
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-h);
+  line-height: normal;
+  margin: var(--mb);
+}
+
+p {
+  font-family: var(--font-t);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+body {
+  margin: 0px;
+  color: var(--black);
+  hyphens: auto;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: "Roboto", sans-serif;
+  word-wrap: break-word;
+  background-color: var(--white);
+}
+
+.wrapper {
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  height: 100vh;
+  justify-items: center;
+  justify-content: center;
+  grid-auto-flow: row;
+}
+
+header {
+  /*its container is wrapper */
+  /*Mobile*/
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  /* position: relative; */
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  justify-content: baseline;
+  /* align-items: baseline; */
+  background-color: var(--white);
+}
+
+.icons-nav {
+  grid-column: 3 / 4;
+  grid-row: 1 / -1;
+  display: flex;
+  flex-flow: row;
+  justify-content: end;
+  align-items: center;
+  padding: var(--p);
+}
+
+.icons-nav-desk {
+  display: none;
+}
+
+.hamburger {
+  /*Mobile*/
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  padding: var(--p);
+  width: 16px;
+  cursor: pointer;
+}
+
+.cart,
+.wish,
+.search,
+.user,
+.exchange {
+  padding: var(--pl);
+  width: 16px;
+  cursor: pointer;
+}
+
+#logo {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  padding: var(--p);
+  color: var(--black);
+}
+
+#logo img {
+  width: 8rem;
+}
+
+.button-nav {
+  border: none;
+  background-color: var(--green);
+  padding: var(--p);
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--font-sm);
+  border-radius: var(--border-radius-10);
+}
+
+a.button-nav:link,
+a.button-nav:visited {
+  color: var(--black);
+}
+
+#menu {
+  display: none;
+}
+
+#mainmenu {
+  /*Mobile*/
+  display: none;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  margin: 0;
+  width: 100%;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  text-align: left;
+  padding: var(--ptb);
+  background-color: var(--green);
+  height: auto;
+}
+
+#mainmenu ul {
+  width: 100%;
+}
+
+#mainmenu li {
+  text-decoration: none;
+  list-style: none;
+  padding: var(--ptb);
+  border-bottom: 1px solid var(--white);
+  border-width: thin;
+  width: 100vw;
+}
+
+#mainmenu li:last-child {
+  border-bottom: 0px;
+}
+
+#mainmenu li a.mainmenu:link,
+a.mainmenu:visited,
+a.mainmenu:active {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 400;
+  padding: var(--pl);
+}
+
+#ani-text-1 {
+  width: 100%;
+  background-color: var(--blue);
+  padding: var(--ptb);
+  display: flex;
+  justify-content: center;
+}
+.ani-text-1 {
+  font-size: 1rem;
+  color: var(--black);
+  font-family: var(--font-t);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero,
+.calming {
+  height: 400px;
+}
+
+.hero {
+  background-color: var(--green);
+  width: 100%;
+  /* height: auto; */
+  display: flex;
+  flex-flow: row;
+  background-image: url("../images/image.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.hero-text {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  padding: var(--p);
+  margin: var(--m);
+  /* height: fit-content; */
+  /* justify-content: baseline; */
+  align-content: center;
+}
+
+.calming {
+  background-color: var(--green);
+  width: 100%;
+  /* height: auto; */
+  display: flex;
+  flex-flow: row;
+  background-image: url("../images/image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.calming-text {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  padding: var(--p);
+  margin: var(--m);
+  /* height: fit-content; */
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.center-text {
+  width: 100%;
+  text-align: center;
+  padding: var(--p);
+}
+
+/* button {
+  width: fit-content;
+  background-color: var(--green);
+  border: none;
+  color: var(--white);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-radius: var(--border-radius-10);
+  cursor: pointer;
+  margin: var(--mtb-large);
+} */
+
+.links {
+  width: fit-content;
+  background-color: var(--green);
+  border: none;
+  color: var(--black);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-radius: var(--border-radius-10);
+  cursor: pointer;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.m-2-auto {
+  margin: 2rem auto;
+}
+
+.m-large {
+  margin: var(--mtb-large);
+}
+
+.mtb-large {
+  margin: var(--mtb-large);
+}
+
+.product button {
+  padding: 15px 32px;
+  margin: var(--mtb);
+}
+
+main {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  width: 100%;
+  /* padding: var(--p); */
+  /* margin: var(--m); */
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding: var(--plr);
+  margin: var(--mtb-large);
+}
+
+.breadcrumb li {
+  list-style: none;
+  margin: var(--mr);
+}
+
+.breadcrumb li,
+a.b-links:link,
+a.b-links:visited,
+a.b-links:hover,
+a.b-links:active {
+  text-decoration: none;
+  font-size: var(--font-sm);
+  color: var(--black);
+}
+
+section {
+  padding: var(--ptb-medium);
+}
+
+section h2 {
+  margin-bottom: 2rem;
+}
+
+/****************  Mobile - Section Shampoos, Soaps, Lips ******************/
+
+#products {
+  background-color: var(--green);
+}
+
+.products {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+a.pro-home:link,
+a.pro-home:visited,
+a.pro-home:active,
+a.pro-home:hover {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.products .product {
+  /* width: 70%; */
+  display: flex;
+  flex-direction: column;
+  padding: var(--p);
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  background-color: var(--white);
+  padding: var(--p);
+}
+
+.products .product h2 {
+  margin: var(--mtb-large);
+  color: var(--black);
+}
+
+.products .product img {
+  max-width: 100%;
+}
+
+/*****************  Mobile Section Create Soap Home  ******************/
+
+.create-soap-home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+  padding: var(--plr);
+  gap: 4rem;
+}
+
+.create-soap-home-text,
+.create-soap-home-img {
+  margin: var(--mtb);
+  width: 100%;
+}
+
+.create-soap-home img {
+  width: 100%;
+}
+
+/******************   Workshops Home   **************************/
+
+#workshops {
+  background-image: url("../images/image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 350px;
+}
+.workshops {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+  padding: var(--plr);
+  width: 50%;
+  text-align: center;
+}
+
+.workshop :only-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.workshop :only-child p {
+  width: 80%;
+  text-align: center;
+}
+
+/*******************  Mobile Instagram Home  *****************/
+
+.insta-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.insta-social-images {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.insta-social h2 {
+  margin-bottom: 4rem;
+}
+
+.insta-social img {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/******************  Mobile Create Soap - Custom Form ***************************/
+
+#form-mobile {
+  display: flex;
+}
+
+#select {
+  border: 1px solid;
+  border-radius: var(--border-radius-10);
+  padding: var(--ps);
+  background-color: var(--white);
+  font-weight: normal;
+  margin: var(--mlr);
+}
+
+#select option {
+  padding: var(--p);
+}
+
+label {
+  box-shadow: none;
+}
+
+.head-main {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sorting,
+.filter {
+  width: auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: end;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.heading {
+  width: 100vw;
+  /* display: flex; */
+  /* flex-flow: column; */
+  /* gap: 1rem; */
+}
+
+.form-create-soap-mobile {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.list-experiences li {
+  display: inline-flex;
+  font-size: small;
+  list-style: none;
+  cursor: pointer;
+  padding: var(--ps);
+  /* border: 1px solid var(--dark-green); */
+  /* border-width: thin; */
+  /* margin: var(--mlr); */
+}
+
+.ingredients {
+  padding: var(--plr);
+  margin: var(--mtb-large);
+}
+
+.exp-sel,
+.oil-selected {
+  background-color: var(--green);
+  border-radius: var(--border-radius);
+  color: var(--black);
+  padding: var(--ps);
+  font-weight: bold;
+}
+
+.oil-selected {
+  display: flex;
+  flex-flow: row;
+  cursor: pointer;
+  font-size: small;
+}
+
+.oil-selected img {
+  padding-left: 0.5rem;
+}
+
+.form-create-soap-mobile ul li img {
+  /* width: 1rem; */
+  width: 100%;
+}
+
+.form-create-soap-mobile img {
+  display: flex;
+  width: 100%;
+}
+
+.list-items,
+.oils-selected {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 0;
+}
+
+.list-items,
+.list-experiences,
+.list-color-shape {
+  list-style: none;
+  padding: 0;
+  margin: var(mtb);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.icon-item,
+.icon-text {
+  padding: var(--ps);
+  width: 36px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.icon-item {
+  color: var(--white);
+  border-radius: var(--border-radius);
+  height: 36px;
+}
+
+.rosemary {
+  background-image: url("../images/image.jpg");
+}
+
+.cinnamon {
+  background-image: url("../images/image.jpg");
+}
+.ginger {
+  background-image: url("../images/image.jpg");
+}
+.jasmine {
+  background-image: url("../images/image.jpg");
+}
+
+.icon-text {
+  font-size: small;
+  overflow-wrap: normal;
+}
+
+.list-items .arrows {
+  width: 1rem;
+  /* height: 1rem; */
+  margin-bottom: 3rem;
+  background-color: var(--green);
+  border-radius: var(--border-radius);
+  padding: var(--ps);
+  cursor: pointer;
+}
+
+.color-shape {
+  display: inline-flex;
+  width: 100%;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.list-color-shape .color-img {
+  background-color: #695192;
+}
+
+/* .list-color-shape .shape-img {
+  background-image: url("../images/circle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+} */
+
+.list-color-shape {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.list-color-shape .arrows {
+  width: 1rem;
+  /* height: 1rem; */
+  /* margin-bottom: 3rem; */
+  background-color: var(--green);
+  border-radius: var(--border-radius);
+  padding: var(--ps);
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  flex-flow: column;
+}
+
+.items-title {
+  font-size: small;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.oils-selected {
+  display: flex;
+  flex-flow: row;
+}
+
+.cost {
+  display: flex;
+  flex-flow: column;
+  margin: var(--mtb-large);
+  width: 100%;
+}
+
+.container-cost {
+  display: flex;
+  width: 90%;
+  padding: var(--plr);
+}
+
+.rows-description {
+  font-size: 1rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-content: center;
+  border-top: 1px solid var(--black);
+  padding: var(--ptb);
+}
+
+.material,
+.dimensions {
+  text-align: center;
+}
+
+.add-to-wishlist {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  /* border-top: 1px solid var(--black); */
+  padding: var(--ptb);
+}
+
+a.add-to-wishlist:link {
+  text-decoration: none;
+}
+
+.minimun {
+  display: flex;
+  flex-flow: row;
+  margin: var(--mtb);
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.plus,
+.minus {
+  border: 1px solid var(--black);
+  border-radius: var(--border-radius-10);
+  padding: var(--ps);
+  cursor: pointer;
+  line-height: 0;
+  height: 16px;
+  width: 16px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--black);
+  border-radius: var(--border-radius-10);
+  padding: var(--ps);
+  height: 16px;
+  width: 16px;
+  line-height: 0;
+}
+
+.container-add-to-cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-to-cart {
+  padding: var(--p-large);
+  /* font-size: medium; */
+  /* margin: var(--mt); */
+  /* width: 100%; */
+}
+
+#form-mobile {
+  display: flex;
+}
+
+#form-desktop {
+  display: none;
+}
+
+/************** Desktop Form Select Color, Shape, Note  ****************************/
+
+/* Hide the browser's default checkbox */
+.label-color input,
+.label-shape input,
+.label-note input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.label-color .purple {
+  background-color: #695192;
+  cursor: pointer;
+  opacity: 1;
+}
+/* On mouse-over, add a inner shadow */
+.label-color:hover input ~ .purple {
+  /* background-color: #ccc; */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
+}
+/* When the checkbox is checked, add a blue background */
+.label-color input:checked ~ .purple {
+  background-color: #695192;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.purple:after,
+.circle:after,
+.note:after {
+  content: "";
+  display: none;
+}
+/* Show the checkmark when checked */
+.label-color input:checked ~ .purple:after,
+.label-shape input:checked ~ .circle:after,
+.label-note input:checked ~ .note:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.label-color .purple:after,
+.label-shape .circle:after,
+.label-note .note:after {
+  width: 5px;
+  height: 10px;
+  border: solid var(--green);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 1;
+}
+
+/******************  Desktop Form Select Shape ************************************/
+
+/* Create a custom checkbox */
+.label-shape .circle,
+.label-note .note {
+  /* background-color: #695192; */
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* On mouse-over, add a inner shadow */
+.label-shape:hover input ~ .circle {
+  /* background-color: #ccc; */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
+}
+
+/**************  Form Select Note  ****************************/
+
+/* On mouse-over, add a inner shadow */
+.label-note:hover input ~ .note {
+  box-shadow: inset 0px 0px 0px 1px var(--beige);
+}
+/* When the checkbox is checked, add a blue background */
+.label-note input:checked ~ .note {
+  box-shadow: inset 0px 0px 0px 2px var(--green);
+}
+
+/***********  Mobile Product.html page **********************/
+
+.product-description-product-page {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bag-image img {
+  width: 100%;
+}
+
+.excerpt-product {
+  display: flex;
+  flex-flow: column;
+  /* padding: var(--p); */
+}
+
+.description {
+  margin: var(--mtb-large);
+  padding: var(--p);
+}
+
+/*********  Mobile Sustainability icons Create Soap and Products pages *****************/
+
+#sustainability {
+  background-color: var(--green);
+}
+
+.icons-sustainability {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.icon {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.icon-exchange {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 2rem;
+  border: 1px solid var(--black);
+  padding: 10px 10px;
+  border-radius: 100%;
+  line-height: 0;
+}
+
+.icons-sustainability .icon {
+  /* width: 70%; */
+  display: flex;
+  flex-direction: column;
+  padding: var(--p);
+  align-items: center;
+  text-align: center;
+}
+
+.icons {
+  /* background-color: var(--white); */
+  padding: var(--p);
+}
+
+.icons-sustainability .icon h2 {
+  margin: var(--mtb-large);
+  color: var(--black);
+}
+
+.icons-sustainability .icon img {
+  /* width: 4rem; */
+  max-width: 100%;
+  /* border-radius: 100%; */
+  /* border: 2px solid var(--black); */
+  display: inline-flex;
+  height: 4rem;
+  padding: var(--p);
+}
+
+/******************** Mobile Shop  *************************************/
+.buttons-type-products {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  /* width: 100%; */
+}
+
+.shampoo-lips {
+  width: fit-content;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 15px 32px;
+  /* text-align: center; */
+  /* text-decoration: none; */
+  text-transform: uppercase;
+  /* letter-spacing: 0.1rem; */
+  border-radius: var(--border-radius-100);
+  cursor: pointer;
+}
+
+#shop-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4rem;
+  padding: var(--p);
+}
+
+a.product-img-container:link,
+a.product-img-container:visited,
+a.product-img-container:active,
+a.product-img-container:focus {
+  background-image: url("../images/image.jpg");
+  cursor: pointer;
+}
+
+a.product-img-container:hover {
+  background-image: url("../images/hover-image.png");
+}
+
+.product-img-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid var(--blue);
+  padding: var(--p);
+  width: 280px;
+  height: 280px;
+  margin: var(--mb);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-image: url("../images/image.jpg"); */
+}
+
+.colors-exchange-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.colors {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+ul.colors li {
+  width: 1rem;
+  height: 1rem;
+  background-color: #000000;
+  list-style: none;
+  margin: var(--mr);
+  border-radius: 0.5rem;
+}
+
+ul.colors .icon #cartTemplate {
+  display: flex;
+}
+
+.bag-image {
+  width: 100%;
+}
+
+.price-add-to-card {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.thumbs-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+ul.thumbs {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul.thumbs li {
+  width: 60px;
+  height: 60px;
+  background-color: #000000;
+  list-style: none;
+  margin: var(--mlr);
+  border: 1px solid var(--blue);
+  border-radius: 0.5rem;
+  background-image: url("../images/image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/********************  Mobile Notes & Fragances *******************************/
+
+#experiences {
+  /* width: 100%; */
+  display: flex;
+  flex-flow: column;
+}
+
+.experience {
+  display: flex;
+  /* flex-flow: row; */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  flex-flow: column;
+}
+
+.experience-img img {
+  width: 100%;
+}
+
+.experience-text {
+  padding: var(--p);
+  display: flex;
+  flex-flow: column;
+}
+
+a.experience-oil:link,
+a.experience-oil:visited,
+a.experience-oil:active,
+a.experience-oil:active {
+  width: fit-content;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  color: var(--black);
+  padding: 15px 32px;
+  border-radius: var(--border-radius-100);
+  text-decoration: none;
+  margin: var(--mtb-large);
+}
+
+.experience-img,
+.experience-text {
+  /* width: 80%; */
+  margin: var(--xxl);
+}
+
+/***************  Mobile - Calming page *******************/
+
+#essential-oils {
+  background-color: var(--white);
+}
+
+.oils {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+a.pro-home:link,
+a.pro-home:visited,
+a.pro-home:active,
+a.pro-home:hover {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.oils .oil {
+  /* width: 70%; */
+  display: flex;
+  flex-direction: column;
+  padding: var(--p);
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  background-color: var(--white);
+  padding: var(--p);
+}
+
+.oils .oil h2 {
+  margin: var(--mtb-large);
+  color: var(--black);
+}
+
+.oils .oil img {
+  max-width: 100%;
+}
+
+/********************  Mobile Footer **************************************/
+
+footer {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  width: 100%;
+  color: var(--black);
+  background-color: var(--green);
+}
+
+footer .logo img {
+  width: 8rem;
+}
+
+footer .logo,
+.contact,
+.social,
+.footer-menu {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  padding: var(--p);
+  margin: var(--ptb-large);
+  width: 100%;
+  gap: 4rem;
+}
+
+a.footer-menu:link,
+a.footer-menu:visited,
+a.footer-menu:active {
+  list-style: none;
+  text-decoration: none;
+  color: var(--black);
+}
+
+a.footer-menu:hover {
+  /* color: var(--black); */
+  text-decoration: underline;
+}
+
+footer ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul {
+  padding: 0;
+}
+
+.footer .social img {
+  width: 2rem;
+  margin: var(--mr);
+}
+
+/* footer > * {
+  display: flex;
+  flex-direction: column;
+} */
+
+.w100 {
+  width: 100%;
+  /* display: flex; */
+}
+
+.w50 {
+  width: 50%;
+  /* display: flex; */
+}
+
+/* ------------------ Tablet -----------------------*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+}
+
+/* ------------------ Desktop -----------------------*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+  nav {
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+  }
+
+  #logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .experience {
+    display: flex;
+    /* flex-flow: row; */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    flex-flow: row;
+  }
+
+  .experience-img,
+  .experience-text {
+    width: 50%;
+    margin: var(--xxl);
+  }
+
+  .experience-text {
+    padding: 4rem;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  #mainmenu {
+    display: none;
+  }
+  #menu {
+    /*Desktop*/
+    display: flex;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    margin: 0;
+    width: 100%;
+    flex-flow: row;
+    justify-content: initial;
+    align-content: center;
+    text-align: center;
+    padding: var(--ptb);
+    height: auto;
+  }
+  #menu li {
+    border-bottom: 0px;
+    display: inline;
+    padding: var(--p);
+    /* margin: var(--mlr); */
+  }
+
+  #menu li a.menu:link,
+  a.menu:visited,
+  a.menu:active {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  #menu li a.button:link,
+  a.button:visited,
+  a.button:active {
+    background-color: var(--green);
+    border: none;
+    color: var(--white);
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--border-radius-100);
+    cursor: pointer;
+  }
+
+  .icons-nav-desk {
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-flow: row;
+    justify-content: end;
+    align-items: center;
+    padding: var(--p);
+  }
+
+  .icons-nav {
+    display: none;
+  }
+
+  #ani-text-1 {
+    width: 100%;
+    background-color: var(--blue);
+    padding: var(--ptb);
+    display: flex;
+    justify-content: center;
+  }
+  .ani-text-1 {
+    font-size: 1rem;
+    color: var(--black);
+    font-family: var(--font-t);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+
+  .hero,
+  .calming {
+    height: 550px;
+  }
+
+  .center-text {
+    width: 50%;
+    text-align: center;
+    /* padding: var(--p); */
+  }
+
+  /* button {
+    padding: 15px 32px;
+    font-size: medium;
+    text-transform: uppercase;
+    margin: var(--mtb-large);
+  } */
+
+  .container {
+    width: 1280pc;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: var(--ptb-large);
+  }
+
+  /************ Desktop Create Soap*******************************/
+
+  .products {
+    width: 100%;
+    margin: var(--mtb);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .products .product {
+    width: 33%;
+  }
+
+  a.pro-home:link,
+  a.pro-home:visited,
+  a.pro-home:active,
+  a.pro-home:hover {
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .breadcrumb {
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--green);
+    /* border-top: 1px solid var(--green); */
+    border-width: thin;
+    padding: var(--ptb);
+  }
+
+  .create-soap-home {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row;
+  }
+
+  .create-soap-home-text,
+  .create-soap-home-img {
+    margin: var(--mtb);
+    width: 50%;
+  }
+
+  .container-add-to-cart {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  /************** Desktop Intagram **********************/
+
+  .insta-social {
+    flex-direction: column;
+  }
+
+  .insta-social-images {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .insta-social img {
+    max-width: 20%;
+  }
+
+  /*******************Desktop headders *******************/
+
+  .head-main {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sorting,
+  .filter {
+    width: 50%;
+    font-size: 1rem;
+  }
+
+  .heading {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    text-align: initial;
+  }
+
+  /********************  Mobile Notes & Fragances *******************************/
+
+  .experiences {
+    display: flex;
+    /* flex-flow: column; */
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .experience-img,
+  .experience-text {
+    width: 100%;
+    margin: 0;
+  }
+
+  /**********************  Desktop Calming page *****************************/
+
+  .oils {
+    width: 100%;
+    margin: var(--mtb);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .oils .oil {
+    width: 27%;
+  }
+
+  /******************  Desktop Footer *****************/
+
+  .footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .footer .logo,
+  .contact,
+  .social,
+  .footer-menu {
+    width: 33%;
+  }
+
+  .footer h3 {
+    margin-top: 0;
+  }
+
+  /******************* Desktop Create Soap Html *********************/
+
+  #form-mobile {
+    display: none;
+  }
+
+  #form-desktop {
+    display: flex;
+  }
+
+  .form-create-soap-desktop {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    gap: 4rem;
+    width: 100%;
+  }
+
+  .ingredients {
+    padding: 0;
+  }
+
+  .bag-image,
+  .bag-description,
+  .description {
+    width: 50%;
+  }
+
+  .list-items,
+  .list-experiences,
+  .list-color-shape {
+    margin: var(--mtb-large);
+  }
+
+  .icon-item,
+  .icon-text {
+    padding: var(--p);
+    width: 48px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-item {
+    height: 48px;
+    background-color: var(--white);
+    color: var(--white);
+    border-radius: var(--border-radius);
+  }
+
+  /************** Desktop Form Select Color, Shape, Note  ****************************/
+
+  /* Hide the browser's default checkbox */
+  .label-color input,
+  .label-shape input,
+  .label-note input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* Create a custom checkbox */
+  .label-color .purple {
+    background-color: #695192;
+    cursor: pointer;
+    opacity: 1;
+  }
+  /* On mouse-over, add a inner shadow */
+  .label-color:hover input ~ .purple {
+    /* background-color: #ccc; */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+  /* When the checkbox is checked, add a blue background */
+  .label-color input:checked ~ .purple {
+    background-color: #695192;
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .purple:after,
+  .circle:after,
+  .note:after {
+    content: "";
+    display: none;
+  }
+  /* Show the checkmark when checked */
+  .label-color input:checked ~ .purple:after,
+  .label-shape input:checked ~ .circle:after,
+  .label-note input:checked ~ .note:after {
+    display: block;
+  }
+  /* Style the checkmark/indicator */
+  .label-color .purple:after,
+  .label-shape .circle:after,
+  .label-note .note:after {
+    width: 5px;
+    height: 10px;
+    border: solid var(--green);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 1;
+  }
+
+  /******************  Desktop Form Select Shape ************************************/
+
+  /* Create a custom checkbox */
+  .label-shape .circle,
+  .label-note .note {
+    /* background-color: #695192; */
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  /* On mouse-over, add a inner shadow */
+  .label-shape:hover input ~ .circle {
+    /* background-color: #ccc; */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+
+  /**************  Form Select Note  ****************************/
+
+  /* On mouse-over, add a inner shadow */
+  .label-note:hover input ~ .note {
+    box-shadow: inset 0px 0px 0px 1px var(--beige);
+  }
+  /* When the checkbox is checked, add a blue background */
+  .label-note input:checked ~ .note {
+    box-shadow: inset 0px 0px 0px 2px var(--green);
+  }
+
+  /******************************************************/
+
+  .list-experiences li {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .oils-selected {
+    justify-content: flex-start;
+  }
+
+  .color-shape {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .color,
+  .shape {
+    position: absolute;
+    z-index: 1;
+    /* margin-top: -300px; */
+    bottom: 0;
+    color: var(--white);
+    margin: var(--m);
+  }
+
+  .color {
+    left: 0;
+  }
+
+  .shape {
+    right: 0;
+  }
+
+  .list-color-shape .shape-img {
+    background-size: 65%;
+  }
+
+  /***********  Desktop Product.html page > Using Create Soap **********************/
+
+  #product {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-description-product-page {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 4rem;
+  }
+
+  .name-price {
+    margin: var(--mtb-large);
+  }
+
+  .name {
+    font-family: var(--font-h);
+    height: fit-content;
+  }
+
+  .price {
+    font-family: var(--font-h);
+    margin: var(--mtb-large);
+    height: fit-content;
+  }
+
+  .ingredients-product {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .icons-sustainability {
+    flex-direction: row;
+  }
+
+  /***************** Desktop Shop Page ***********************************/
+
+  .buttons-type-products {
+    display: flex;
+    flex-flow: row;
+    gap: 4rem;
+  }
+
+  .shampoo-lips {
+    width: fit-content;
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    color: var(--green);
+    padding: 15px 32px;
+    /* text-align: center; */
+    /* text-decoration: none; */
+    text-transform: uppercase;
+    /* letter-spacing: 0.1rem; */
+    border-radius: var(--border-radius-100);
+    cursor: pointer;
+    /* margin: 0; */
+  }
+
+  #shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4rem;
+  }
+
+  a.product-img-container:link,
+  a.product-img-container:visited,
+  a.product-img-container:active,
+  a.product-img-container:focus {
+    background-image: url("../images/image.jpg");
+    cursor: pointer;
+  }
+
+  a.product-img-container:hover {
+    background-image: url("../images/hover-image.png");
+  }
+
+  .product-img-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid var(--blue);
+    padding: var(--p);
+    width: 280px;
+    height: 280px;
+    margin: var(--mb);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-image: url("../images/image.jpg"); */
+  }
+
+  .colors-exchange-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul.colors {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.colors li {
+    width: 1rem;
+    height: 1rem;
+    background-color: #000000;
+    list-style: none;
+    margin: var(--mr);
+    border-radius: 0.5rem;
+  }
+
+  ul.colors .icon #cartTemplate {
+    display: flex;
+  }
+
+  .bag-image {
+    width: 100%;
+  }
+
+  .price-add-to-card {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  ul.thumbs li {
+    width: 110px;
+    height: 110px;
+  }
+
+  .material,
+  .dimensions {
+    text-align: left;
+  }
+
+  .add-to-wishlist {
+    justify-content: flex-start;
+  }
+}

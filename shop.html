@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silfen Studio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="wrapper">
+    <header class="main-container-header header_bg_content">
+      <nav>
+        <div class="hamburger">
+          <a class="icon" onclick="openmenumobile()">
+            <img src="images/bars-solid.svg" alt="Icon Menu" />
+          </a>
+        </div>
+        <div id="logo" class="logo">
+          <a href="index.html"
+            ><img src="images/logo-silfen.png" alt="Logo"
+          /></a>
+        </div>
+
+        <div class="icons-nav">
+          <!-- <div class="button-nav">
+            <a class="button-nav" href="create-soap.html">Member</a>
+          </div> -->
+
+          <div class="search">
+            <a class="icon">
+              <img src="images/search.svg" alt="Icon Menu" />
+            </a>
+          </div>
+
+          <!-- <div class="wish">
+            <a class="icon">
+              <img src="images/heart.svg" alt="Icon Menu" />
+            </a>
+          </div> -->
+
+          <div class="cart">
+            <a class="icon">
+              <img src="images/bag.svg" alt="Icon Menu" />
+            </a>
+          </div>
+        </div>
+
+        <ul id="mainmenu">
+          <!--Mobile-->
+          <li><a href="shop.html" class="mainmenu">Shop</a></li>
+          <li><a href="#" class="mainmenu">About</a></li>
+          <li>
+            <a href="sustainability.html" class="mainmenu">Sustainability</a>
+          </li>
+          <li><a href="#" class="mainmenu">Silfen Play</a></li>
+          <li><a href="#" class="mainmenu">Whishlist</a></li>
+          <li><a href="#" class="mainmenu">New in</a></li>
+          <li><a href="#" class="mainmenu">Username</a></li>
+          <li><a href="closet.html" class="mainmenu">Closet</a></li>
+          <li>
+            <a href="payment-method.html" class="mainmenu">Payment method</a>
+          </li>
+        </ul>
+
+        <ul id="menu">
+          <!--Desktop-->
+          <li><a href="shop.html" class="menu">Shop</a></li>
+          <li><a href="#" class="menu">About</a></li>
+          <li><a href="sustainability.html" class="menu">Sustainability</a></li>
+          <li><a href="#" class="menu">Silfen Play</a></li>
+          <li><a href="#" class="menu">New in</a></li>
+          <!-- <li><a class="button" href="create-soap.html">Create soap</a></li> -->
+        </ul>
+
+        <div class="icons-nav-desk">
+          <div class="button-nav">
+            <a class="button-nav" href="#">Become a member</a>
+          </div>
+
+          <div class="user">
+            <a class="icon">
+              <img src="images/person.svg" alt="Icon Menu" />
+            </a>
+          </div>
+
+          <div class="search">
+            <a class="icon">
+              <img src="images/search.svg" alt="Icon Menu" />
+            </a>
+          </div>
+
+          <div class="wish">
+            <a class="icon">
+              <img src="images/heart.svg" alt="Icon Menu" />
+            </a>
+          </div>
+
+          <div class="cart">
+            <a class="icon">
+              <img src="images/bag.svg" alt="Icon Menu" />
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div id="ani-text-1">
+        <div class="ani-text-1">
+          3 MONTHS FREE MEMBERSHIP TO SILFEN UNIVERSE WITH NEW PURCHASE
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="">
+        <div class="container">
+          <div class="head-main">
+            <div class="heading">
+              <div><h1>Shop</h1></div>
+              <!-- <div><p>Find the right essential oil to your soap before starting customising.</p></div> -->
+              <!-- <div><button>Essential Oils</button></div> -->
+            </div>
+
+            <div class="sorting">
+              <p>
+                <!-- <label for="select">
+                  <div><p>Filter</p></div>
+                </label> -->
+                <select id="select" required="">
+                  <optgroup label="Filters" class="group">
+                    <option>Filter</option>
+                    <option>Category</option>
+                    <option>Color</option>
+                    <option>Price</option>
+                  </optgroup>
+                </select>
+              </p>
+            </div>
+
+            <div class="filter">
+              <p>
+                <!-- <label for="select">
+                  <div><p>Default sorting</p></div>
+                </label> -->
+                <select id="select" required="">
+                  <optgroup label="Sort by" class="group">
+                    <option>Default sorting</option>
+                    <option>Sort by popularity</option>
+                    <option>Sort by latest</option>
+                    <option>Sort by price: low to high</option>
+                    <option>Sort by price: high to low</option>
+                  </optgroup>
+                </select>
+              </p>
+              <!-- <h4>Default sorting</h4> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--////////////////////////////////////////////-->
+
+      <section id="product-shop">
+        <div class="container">
+          <template id="cartTemplate">
+            <div>
+              <a href="#" class="product-img-container">
+                <div class="colors-exchange-container">
+                  <ul class="colors">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <div class="icon">
+                    <img
+                      src="images/arrow-left-right.svg"
+                      alt="Icon Exchange"
+                    />
+                  </div>
+                </div>
+                <!-- <img class="bag-image" src="images/image.jpg" alt="" /> -->
+              </a>
+              <h4 class="bag-name">Name of the Bag</h4>
+              <div class="price-add-to-card">
+                <p class="bag-price">Price</p>
+                <a href="product.html" class="links">ADD TO CART</a>
+              </div>
+            </div>
+          </template>
+
+          <!--////////////////////////////////////////////-->
+
+          <div id="shop-grid"></div>
+          <!--Shop Grid Ends-->
+        </div>
+        <!--Container ends-->
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="logo">
+            <!-- <h3>Logo</h3> -->
+            <img src="images/logo-silfen.png" alt="Logo" />
+            <p>Lorem Impsum ...</p>
+          </div>
+
+          <div class="contact">
+            <h3>Contact</h3>
+            <ul>
+              <li>SILFEN STUDIO</li>
+              <li>Klareboderne 10, 1. 1115 Copenhagen K Denmark</li>
+              <li>Phone: +45 20518923</li>
+              <li>VAT: DK40912320</li>
+            </ul>
+          </div>
+
+          <ul class="footer-menu">
+            <!--Mobile-->
+            <li><a href="#" class="footer-menu">Shop</a></li>
+            <li><a href="#" class="footer-menu">About</a></li>
+            <li><a href="#" class="footer-menu">Silfen Play</a></li>
+            <li><a href="#" class="footer-menu">Whishlist</a></li>
+            <li><a href="#" class="footer-menu">New in</a></li>
+          </ul>
+
+          <div class="social">
+            <h3>Follow us</h3>
+            <div>
+              <img src="images/facebook.svg" alt="" />
+              <img src="images/instagram.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- ".footer" ends-->
+      </div>
+      <!--Container ends-->
+    </footer>
+    <script src="js/functions.js"></script>
+    <script src="js/shop.js"></script>
+  </body>
+</html>
