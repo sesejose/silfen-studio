@@ -26,7 +26,7 @@ function showBag(bag) {
   // copy.querySelector(".class").src = bag.imageurl;
   copy
     .querySelector(".price-add-to-card a")
-    .setAttribute("href", `product.html?id=${bag._id}`);
+    .setAttribute("href", `product.html?id=${bag.id}`);
   const parent = document.querySelector("#shop-grid");
   parent.appendChild(copy);
 }
