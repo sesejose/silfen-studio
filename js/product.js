@@ -31,4 +31,12 @@ function showBag(bag) {
     bag.excerpt.rendered;
   document.querySelector(".material").textContent = bag.material;
   document.querySelector(".dimensions").textContent = bag.dimensions;
+  document.querySelector("ul.thumbs li:first-child").style.backgroundImage =
+    "url('bag.thumb3.guid')";
+  document.querySelector("ul.thumbs li:nth-child(2)").style.backgroundImage =
+    "url('bag.thumb3.guid')";
+  document.querySelector("ul.thumbs li:nth-child(3)").style.backgroundImage =
+    "url('bag.thumb3.guid')";
+  document.querySelector("ul.thumbs li:last-child").style.backgroundImage =
+    "url('bag.thumb3.guid')";
 }

@@ -42,7 +42,7 @@
 }
 
 .plr {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 h1,
@@ -230,13 +230,21 @@ a.mainmenu:active {
 }
 
 #ani-text-1 {
-  width: 100%;
   background-color: var(--blue);
+}
+#ani-text-2 {
+  background-color: var(--yellow);
+}
+
+#ani-text-1,
+#ani-text-2 {
+  width: 100%;
   padding: var(--ptb);
   display: flex;
   justify-content: center;
 }
-.ani-text-1 {
+.ani-text-1,
+.ani-text-2 {
   font-size: 1rem;
   color: var(--black);
   font-family: var(--font-t);
@@ -306,6 +314,37 @@ a.mainmenu:active {
   background-color: var(--green);
 }
 
+.yellow-bg {
+  background-color: var(--yellow);
+}
+
+.home-sustainability-membership-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-flow: column;
+}
+
+.membership-home,
+.membership-home-img,
+.membership-home-text,
+.sustainability-home,
+.sustainability-home-img,
+.sustainability-home-text {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.membership-home-img img,
+.sustainability-home-img img {
+  width: 100%;
+}
+
 .calming {
   background-color: var(--green);
   width: 100%;
@@ -355,7 +394,8 @@ a.mainmenu:active {
 } */
 
 .links,
-.links-black {
+.links-black,
+.links-yellow {
   width: fit-content;
   border: none;
   padding: 15px 32px;
@@ -365,6 +405,11 @@ a.mainmenu:active {
   letter-spacing: 0.1rem;
   border-radius: var(--border-radius-10);
   cursor: pointer;
+}
+
+.links-yellow {
+  color: var(--black);
+  background-color: var(--yellow);
 }
 
 .links-black {
@@ -450,7 +495,7 @@ section h2 {
 /****************  Mobile - Section Shampoos, Soaps, Lips ******************/
 
 #products {
-  background-color: var(--green);
+  background-color: var(--white);
 }
 
 .products {
@@ -533,41 +578,6 @@ a.pro-home:hover {
   background-position: center;
   background-repeat: none;
   background-size: cover;
-}
-
-/******************   Workshops Home   **************************/
-
-#workshops {
-  background-image: url("../images/image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  min-height: 350px;
-}
-.workshops {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: column;
-  padding: var(--plr);
-  width: 50%;
-  text-align: center;
-}
-
-.workshop :only-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.workshop :only-child p {
-  width: 80%;
-  text-align: center;
 }
 
 /*******************  Mobile Instagram Home  *****************/
@@ -1029,7 +1039,7 @@ a.add-to-wishlist:link {
   padding: var(--p);
 }
 
-/*********  Mobile Sustainability icons Create Soap and Products pages *****************/
+/*********  Mobile Sustainability icons *****************/
 
 #sustainability {
   background-color: var(--green);
@@ -1078,7 +1088,7 @@ a.add-to-wishlist:link {
   color: var(--black);
 }
 
-.icons-sustainability .icon img {
+.icons-sustainability img {
   /* width: 4rem; */
   max-width: 100%;
   /* border-radius: 100%; */
@@ -1132,6 +1142,7 @@ a.product-img-container:focus {
 
 a.product-img-container:hover {
   /* background-image: url("../images/hover-image.png"); */
+  cursor: pointer;
 }
 
 .product-img-container {
@@ -1211,43 +1222,18 @@ ul.thumbs li {
   margin: var(--mlr);
   border: 1px solid var(--blue);
   border-radius: 0.5rem;
-  background-image: url("../images/image.jpg");
+  /* background-image: url("../images/image.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/********************  Mobile Notes & Fragances *******************************/
+/********************  Mobile *******************************/
 
-#experiences {
-  /* width: 100%; */
-  display: flex;
-  flex-flow: column;
-}
-
-.experience {
-  display: flex;
-  /* flex-flow: row; */
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-  flex-flow: column;
-}
-
-.experience-img img {
-  width: 100%;
-}
-
-.experience-text {
-  padding: var(--p);
-  display: flex;
-  flex-flow: column;
-}
-
-a.experience-oil:link,
-a.experience-oil:visited,
-a.experience-oil:active,
-a.experience-oil:active {
+a.sustainability-home:link,
+a.sustainability-home:visited,
+a.sustainability-home:active,
+a.sustainability-home:active {
   width: fit-content;
   background-color: var(--white);
   border: 1px solid var(--black);
@@ -1258,10 +1244,27 @@ a.experience-oil:active {
   margin: var(--mtb-large);
 }
 
-.experience-img,
-.experience-text {
-  /* width: 80%; */
-  margin: var(--xxl);
+/****************   Mobile Sustainability page   *******************************************/
+
+.responsability {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-flow: column;
+  width: 100%;
+}
+
+.working,
+.water,
+.shipping {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--plr);
+  text-align: left;
 }
 
 /***************  Mobile - Calming page *******************/
@@ -1358,7 +1361,7 @@ a.footer-menu:hover {
 
 footer ul li {
   list-style-type: none;
-  padding: 0;
+  padding: 0.5rem 0;
   margin: 0;
 }
 
@@ -1407,27 +1410,6 @@ footer ul {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .experience {
-    display: flex;
-    /* flex-flow: row; */
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0;
-    flex-flow: row;
-  }
-
-  .experience-img,
-  .experience-text {
-    width: 50%;
-    margin: var(--xxl);
-  }
-
-  .experience-text {
-    padding: 4rem;
-    display: flex;
-    flex-flow: column;
   }
 
   .hamburger {
@@ -1491,15 +1473,22 @@ footer ul {
   .icons-nav {
     display: none;
   }
-
   #ani-text-1 {
-    width: 100%;
     background-color: var(--blue);
+  }
+  #ani-text-2 {
+    background-color: var(--yellow);
+  }
+
+  #ani-text-1,
+  #ani-text-2 {
+    width: 100%;
     padding: var(--ptb);
     display: flex;
     justify-content: center;
   }
-  .ani-text-1 {
+  .ani-text-1,
+  .ani-text-2 {
     font-size: 1rem;
     color: var(--black);
     font-family: var(--font-t);
@@ -1515,7 +1504,7 @@ footer ul {
   }
 
   .center-text {
-    width: 50%;
+    /* width: 50%; */
     text-align: center;
     /* padding: var(--p); */
   }
@@ -1609,6 +1598,56 @@ footer ul {
     width: 100%;
     display: flex;
     justify-content: end;
+  }
+
+  /******************************************************/
+
+  .home-sustainability-membership-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-flow: row;
+    width: 100%;
+  }
+
+  .membership-home,
+  .membership-home-img,
+  .membership-home-text,
+  .sustainability-home,
+  .sustainability-home-img,
+  .sustainability-home-text {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--plr);
+    text-align: left;
+  }
+
+  /****************   Mobile Sustainability page   *******************************************/
+
+  .responsibility,
+  .materials {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-flow: row;
+    width: 100%;
+  }
+
+  .working,
+  .water,
+  .shipping {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--plr);
+    text-align: left;
   }
 
   /************** Desktop Intagram **********************/
