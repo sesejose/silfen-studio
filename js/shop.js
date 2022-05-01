@@ -22,8 +22,7 @@ function showBag(bag) {
   copy.querySelector(".bag-name").textContent = bag.title.rendered;
   copy.querySelector(".bag-price").textContent = bag.price;
   document.querySelector("a").style.backgroundImage = "url('bag.thumb1.guid')";
-  // copy.querySelector(".class").textContent = bag.price;
-  // copy.querySelector(".class").src = bag.imageurl;
+
   copy
     .querySelector(".price-add-to-card a")
     .setAttribute("href", `product.html?id=${bag.id}`);

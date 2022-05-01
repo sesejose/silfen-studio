@@ -12,8 +12,13 @@ fetch(url)
     return response.json();
   })
   .then((data) => {
-    showBag(data);
+    handleBag(data);
   });
+
+function handleBag(data) {
+  //Bag is an array, so here I am looping through the array that comes back from the API. Extracting all the objects from the array - one by one !
+  data.forEach(showBag);
+}
 
 function showBag(bag) {
   console.log(bag);
@@ -21,7 +26,9 @@ function showBag(bag) {
 
   document.querySelector(".name").textContent = bag.title.rendered;
   document.querySelector(".price").textContent = bag.price;
-
-  document.querySelector(".bag-image img").src =
-    bag._embedded["wp:featuredmedia"][0].source_url;
+  document.querySelector(".bag-image img").src = bag.thumb1.guid;
+  document.querySelector(".excerpt-product p").textContent =
+    bag.excerpt.rendered;
+  document.querySelector(".material").textContent = bag.material;
+  document.querySelector(".dimensions").textContent = bag.dimensions;
 }
