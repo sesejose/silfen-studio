@@ -118,7 +118,7 @@ nav {
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 1fr;
   grid-auto-flow: column;
-  justify-content: baseline;
+  justify-content: center;
   /* align-items: baseline; */
   background-color: var(--white);
 }
@@ -602,7 +602,7 @@ a.pro-home:hover {
   height: 290px;
   background-image: url("../images/circular_economy-01.png");
   background-position: center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -752,7 +752,7 @@ label {
 .list-color-shape {
   list-style: none;
   padding: 0;
-  margin: var(mtb);
+  margin: var(--mtb);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1617,7 +1617,7 @@ footer ul {
     height: 550px;
     background-image: url("../images/circular_economy-01.png");
     background-position: center;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
@@ -2029,8 +2029,8 @@ footer ul {
   }
 
   .test {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
