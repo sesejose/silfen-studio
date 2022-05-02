@@ -904,6 +904,7 @@ label {
 
 a.add-to-wishlist:link {
   text-decoration: none;
+  color: var(--black);
 }
 
 .minimun {
@@ -1194,7 +1195,7 @@ a.product-img-container:hover {
   justify-content: space-between;
 }
 
-ul.colors {
+.colors-exchange-container ul {
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
@@ -1202,7 +1203,7 @@ ul.colors {
   margin: 0;
 }
 
-ul.colors li {
+.colors-exchange-container ul li {
   width: 1rem;
   height: 1rem;
   background-color: #000000;
@@ -1211,7 +1212,7 @@ ul.colors li {
   border-radius: 0.5rem;
 }
 
-ul.colors .icon #cartTemplate {
+.colors-exchange-container ul .icon #cartTemplate {
   display: flex;
 }
 
