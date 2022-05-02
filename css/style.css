@@ -310,6 +310,10 @@ a.mainmenu:active {
   background-image: url("../images/sustainability-hero.JPG");
 }
 
+.membership-hero {
+  background-image: url("../images/card-home.JPG");
+}
+
 .blue-bg {
   background-color: var(--blue);
 }
@@ -400,8 +404,6 @@ a.mainmenu:active {
   width: 100%;
   max-width: 100%;
   display: inline-flex;
-  /* height: 24rem; */
-  /* padding: var(--p); */
 }
 
 .icons-steps-pets h1 {
@@ -437,33 +439,6 @@ a.mainmenu:active {
 
 /*********************************************************/
 
-.calming {
-  background-color: var(--green);
-  width: 100%;
-  /* height: auto; */
-  display: flex;
-  flex-flow: row;
-  background-image: url("../images/image.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-}
-
-.calming-text {
-  display: flex;
-  flex-flow: column;
-  width: 50%;
-  padding: var(--p);
-  margin: var(--m);
-  /* height: fit-content; */
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
 .center-text {
   width: 100%;
   text-align: center;
@@ -487,7 +462,8 @@ a.mainmenu:active {
 
 .links,
 .links-black,
-.links-yellow {
+.links-yellow,
+.links-blue {
   width: fit-content;
   border: none;
   padding: 15px 32px;
@@ -507,6 +483,11 @@ a.mainmenu:active {
 .links-black {
   color: var(--yellow);
   background-color: var(--black);
+}
+
+.links-blue {
+  color: var(--black);
+  background-color: var(--blue);
 }
 
 .links {
@@ -539,8 +520,6 @@ main {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   width: 100%;
-  /* padding: var(--p); */
-  /* margin: var(--m); */
 }
 
 .container {
@@ -549,6 +528,7 @@ main {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  flex-flow: column;
 }
 
 .breadcrumb {
@@ -580,18 +560,30 @@ section {
   padding: var(--ptb-medium);
 }
 
-section h2 {
+section h2,
+section h1 {
   margin-bottom: 2rem;
 }
 
-/****************  Mobile - Section Shampoos, Soaps, Lips ******************/
+.headline {
+  display: flex;
+  flex-flow: column;
+  /* width: 100%; */
+  margin: var(--mb);
+  text-align: center;
+  margin: auto auto 4rem auto;
+  align-items: center;
+  justify-content: center;
+}
+
+/****************  Mobile Products Home ******************/
 
 #products {
   background-color: var(--white);
 }
 
 .products {
-  width: 80%;
+  /* width: 80%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -630,7 +622,7 @@ a.pro-home:hover {
   max-width: 100%;
 }
 
-/*****************  Mobile Section Create Soap Home  ******************/
+/*****************  Mobile Our Focus Home  ******************/
 
 .our-focus-home {
   display: flex;
@@ -672,6 +664,125 @@ a.pro-home:hover {
   background-size: cover;
 }
 
+/*********************************************/
+
+.how-it-works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: var(--plr);
+  gap: 4rem;
+}
+
+.how-it-works-text-container {
+  margin: var(--mtb);
+  width: 100%;
+  text-align: center;
+}
+
+.how1,
+.how2,
+.how3,
+.how4,
+.how5 {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: none;
+  text-align: center;
+}
+
+.how h1 {
+  background-color: var(--blue);
+  width: fit-content;
+  padding: 2rem 3rem;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.how h3 {
+  margin: var(--mt);
+}
+
+.how-it-works-steps {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: baseline;
+}
+
+/************************   Benefits *******************************/
+
+#benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6 1fr);
+  /* width: 100%; */
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.benefit {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.benefit-2 {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.benefit-3 {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+}
+
+.benefit-4 {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+}
+
+.benefit-5 {
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+}
+
+.benefit-6 {
+  grid-column: 1 / -1;
+  grid-row: 6 / 7;
+}
+
+.benefit {
+  /* background-color: var(--blue); */
+  padding: var(--p-large);
+  border: 1px solid var(--blue);
+  border-radius: var(--border-radius-10);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.benefit img {
+  width: 75%;
+  margin: var(--m);
+}
+
+.benefit h3 {
+  color: var(--black);
+  /* margin: var(--m); */
+}
+
+.benefit a {
+  margin: var(--mtb);
+}
+
 /*******************  Mobile Instagram Home  *****************/
 
 .insta-social,
@@ -689,17 +800,12 @@ a.pro-home:hover {
   gap: 4rem;
 }
 
-.insta-social h2,
-.rpet-line h2 {
-  margin-bottom: 4rem;
-}
-
 .insta-social img {
   max-width: 80%;
   margin: 0 auto;
 }
 
-/******************  Mobile Create Soap - Custom Form ***************************/
+/******************  Mobile ***************************/
 
 #form-mobile {
   display: flex;
@@ -749,188 +855,9 @@ label {
   /* gap: 1rem; */
 }
 
-.form-create-soap-mobile {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.list-experiences li {
-  display: inline-flex;
-  font-size: small;
-  list-style: none;
-  cursor: pointer;
-  padding: var(--ps);
-  /* border: 1px solid var(--dark-green); */
-  /* border-width: thin; */
-  /* margin: var(--mlr); */
-}
-
-.ingredients {
-  padding: var(--plr);
-  margin: var(--mtb-large);
-}
-
-.exp-sel,
-.oil-selected {
-  background-color: var(--green);
-  border-radius: var(--border-radius);
-  color: var(--black);
-  padding: var(--ps);
-  font-weight: bold;
-}
-
-.oil-selected {
-  display: flex;
-  flex-flow: row;
-  cursor: pointer;
-  font-size: small;
-}
-
-.oil-selected img {
-  padding-left: 0.5rem;
-}
-
-.form-create-soap-mobile ul li img {
-  /* width: 1rem; */
-  width: 100%;
-}
-
-.form-create-soap-mobile img {
-  display: flex;
-  width: 100%;
-}
-
-.list-items,
-.oils-selected {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
-  padding: 0;
-}
-
-.list-items,
-.list-experiences,
-.list-color-shape {
-  list-style: none;
-  padding: 0;
-  margin: var(--mtb);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.item {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.icon-item,
-.icon-text {
-  padding: var(--ps);
-  width: 36px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-}
-
-.icon-item {
-  color: var(--white);
-  border-radius: var(--border-radius);
-  height: 36px;
-}
-
-.rosemary {
-  background-image: url("../images/image.jpg");
-}
-
-.cinnamon {
-  background-image: url("../images/image.jpg");
-}
-.ginger {
-  background-image: url("../images/image.jpg");
-}
-.jasmine {
-  background-image: url("../images/image.jpg");
-}
-
 .icon-text {
   font-size: small;
   overflow-wrap: normal;
-}
-
-.list-items .arrows {
-  width: 1rem;
-  /* height: 1rem; */
-  margin-bottom: 3rem;
-  background-color: var(--green);
-  border-radius: var(--border-radius);
-  padding: var(--ps);
-  cursor: pointer;
-}
-
-.color-shape {
-  display: inline-flex;
-  width: 100%;
-  flex-flow: row;
-  justify-content: space-around;
-}
-
-.list-color-shape .color-img {
-  background-color: #695192;
-}
-
-/* .list-color-shape .shape-img {
-  background-image: url("../images/circle.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-} */
-
-.list-color-shape {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  gap: 0.5rem;
-  padding: 0;
-}
-
-.list-color-shape .arrows {
-  width: 1rem;
-  /* height: 1rem; */
-  /* margin-bottom: 3rem; */
-  background-color: var(--green);
-  border-radius: var(--border-radius);
-  padding: var(--ps);
-  cursor: pointer;
-}
-
-.item {
-  display: flex;
-  flex-flow: column;
-}
-
-.items-title {
-  font-size: small;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.oils-selected {
-  display: flex;
-  flex-flow: row;
 }
 
 .cost {
@@ -961,13 +888,19 @@ label {
   text-align: center;
 }
 
+.whish-exchange {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
 .add-to-wishlist {
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
   /* border-top: 1px solid var(--black); */
-  padding: var(--ptb);
+  /* padding: var(--ptb); */
 }
 
 a.add-to-wishlist:link {
@@ -1013,99 +946,6 @@ a.add-to-wishlist:link {
 
 .add-to-cart {
   padding: var(--p-large);
-  /* font-size: medium; */
-  /* margin: var(--mt); */
-  /* width: 100%; */
-}
-
-#form-mobile {
-  display: flex;
-}
-
-#form-desktop {
-  display: none;
-}
-
-/************** Desktop Form Select Color, Shape, Note  ****************************/
-
-/* Hide the browser's default checkbox */
-.label-color input,
-.label-shape input,
-.label-note input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-/* Create a custom checkbox */
-.label-color .purple {
-  background-color: #695192;
-  cursor: pointer;
-  opacity: 1;
-}
-/* On mouse-over, add a inner shadow */
-.label-color:hover input ~ .purple {
-  /* background-color: #ccc; */
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
-}
-/* When the checkbox is checked, add a blue background */
-.label-color input:checked ~ .purple {
-  background-color: #695192;
-}
-/* Create the checkmark/indicator (hidden when not checked) */
-.purple:after,
-.circle:after,
-.note:after {
-  content: "";
-  display: none;
-}
-/* Show the checkmark when checked */
-.label-color input:checked ~ .purple:after,
-.label-shape input:checked ~ .circle:after,
-.label-note input:checked ~ .note:after {
-  display: block;
-}
-/* Style the checkmark/indicator */
-.label-color .purple:after,
-.label-shape .circle:after,
-.label-note .note:after {
-  width: 5px;
-  height: 10px;
-  border: solid var(--green);
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  z-index: 1;
-}
-
-/******************  Desktop Form Select Shape ************************************/
-
-/* Create a custom checkbox */
-.label-shape .circle,
-.label-note .note {
-  /* background-color: #695192; */
-  cursor: pointer;
-  opacity: 1;
-}
-
-/* On mouse-over, add a inner shadow */
-.label-shape:hover input ~ .circle {
-  /* background-color: #ccc; */
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
-}
-
-/**************  Form Select Note  ****************************/
-
-/* On mouse-over, add a inner shadow */
-.label-note:hover input ~ .note {
-  box-shadow: inset 0px 0px 0px 1px var(--beige);
-}
-/* When the checkbox is checked, add a blue background */
-.label-note input:checked ~ .note {
-  box-shadow: inset 0px 0px 0px 2px var(--green);
 }
 
 /***********  Mobile Product.html page **********************/
@@ -1134,6 +974,15 @@ a.add-to-wishlist:link {
   padding: var(--p);
 }
 
+/***************************************************************/
+
+.bag-image,
+.bag-description,
+.description,
+.image-thumbs {
+  width: 100%;
+}
+
 /*********  Mobile Sustainability icons *****************/
 
 #sustainability {
@@ -1155,14 +1004,24 @@ a.add-to-wishlist:link {
 }
 
 .icon-exchange {
+  display: flex;
   color: var(--black);
   text-decoration: none;
   font-size: 2rem;
   /* border: 1px solid var(--black); */
-  padding: 10px 10px;
+  padding: 10px;
+  margin: 10px;
   border-radius: 100%;
   line-height: 0;
-  background-color: var(--blue);
+  background-color: var(--yellow);
+}
+
+.icon-exchange-shop {
+  position: relative;
+  margin-top: -319px;
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .icons-sustainability .icon {
@@ -1195,6 +1054,7 @@ a.add-to-wishlist:link {
 }
 
 /******************** Mobile Shop  *************************************/
+
 .buttons-type-products {
   display: flex;
   flex-flow: column;
@@ -1204,20 +1064,6 @@ a.add-to-wishlist:link {
   /* width: 100%; */
 }
 
-.shampoo-lips {
-  width: fit-content;
-  background-color: var(--white);
-  border: 1px solid var(--green);
-  color: var(--green);
-  padding: 15px 32px;
-  /* text-align: center; */
-  /* text-decoration: none; */
-  text-transform: uppercase;
-  /* letter-spacing: 0.1rem; */
-  border-radius: var(--border-radius-100);
-  cursor: pointer;
-}
-
 #shop-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1225,7 +1071,7 @@ a.add-to-wishlist:link {
   justify-content: center;
   align-items: baseline;
   gap: 4rem;
-  padding: var(--p);
+  /* padding: var(--p); */
 }
 
 a.product-img-container:link,
@@ -1313,7 +1159,6 @@ ul.thumbs {
 ul.thumbs li {
   width: 60px;
   height: 60px;
-  background-color: #000000;
   list-style: none;
   margin: var(--mlr);
   border: 1px solid var(--blue);
@@ -1363,52 +1208,6 @@ a.sustainability-home:active {
   text-align: left;
 }
 
-/***************  Mobile - Calming page *******************/
-
-#essential-oils {
-  background-color: var(--white);
-}
-
-.oils {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-a.pro-home:link,
-a.pro-home:visited,
-a.pro-home:active,
-a.pro-home:hover {
-  color: var(--black);
-  text-decoration: none;
-}
-
-.oils .oil {
-  /* width: 70%; */
-  display: flex;
-  flex-direction: column;
-  padding: var(--p);
-  align-items: center;
-  text-align: center;
-}
-
-.card {
-  background-color: var(--white);
-  padding: var(--p);
-}
-
-.oils .oil h2 {
-  margin: var(--mtb-large);
-  color: var(--black);
-}
-
-.oils .oil img {
-  max-width: 100%;
-}
-
 /********************  Mobile Footer **************************************/
 
 footer {
@@ -1436,7 +1235,7 @@ footer .logo,
   justify-content: center;
   align-items: baseline;
   text-align: center;
-  padding: var(--p);
+  /* padding: var(--p); */
   margin: var(--ptb-large);
   width: 100%;
   gap: 4rem;
@@ -1594,8 +1393,7 @@ footer ul {
 
   .hero,
   .home-hero,
-  .sustainability-hero,
-  .calming {
+  .sustainability-hero {
     height: 100vh;
   }
 
@@ -1619,16 +1417,17 @@ footer ul {
   .container {
     width: 1280pc;
     max-width: 1280px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
   }
 
   section {
     padding: var(--ptb-large);
   }
 
-  /************ Desktop Create Soap*******************************/
+  .headline {
+    width: 50%;
+  }
+
+  /************ Desktop Products Home *******************************/
 
   .products {
     width: 100%;
@@ -1657,43 +1456,96 @@ footer ul {
     padding: var(--ptb);
   }
 
+  /*****************  Desktop Our Focus Home  ******************/
+
   .our-focus-home {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-flow: row;
   }
 
   .our-focus-text,
   .our-focus-img {
-    margin: var(--mtb);
     width: 50%;
   }
-  .our-focus-home-img h3 {
-    /* margin: var(--mb); */
-    font-weight: 700;
-    /* margin-bottom: 120px; */
-    /* background-color: var(--white); */
-  }
-  .our-focus-home-img {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    align-content: center;
 
-    width: 100%;
+  .our-focus-home-img {
     height: 550px;
     background-image: url("../images/circular_economy-01.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .container-add-to-cart {
     width: 100%;
     display: flex;
     justify-content: end;
+  }
+
+  /*********************************************/
+
+  .how1,
+  .how2,
+  .how3,
+  .how4,
+  .how5 {
+    width: 20%;
+    padding: var(--plr);
+  }
+
+  .how-it-works-steps {
+    flex-flow: row;
+  }
+
+  /************************   Benefits *******************************/
+
+  #benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .benefit-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .benefit-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .benefit-3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .benefit-4 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .benefit-5 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .benefit-6 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .benefit {
+    /* background-color: var(--blue); */
+    padding: var(--p-large);
+    border: 1px solid var(--blue);
+    border-radius: var(--border-radius-10);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .benefit img {
+    width: 50%;
+    margin: var(--m);
   }
 
   /******************************************************/
@@ -1850,35 +1702,6 @@ footer ul {
     text-align: initial;
   }
 
-  /********************  Mobile Notes & Fragances *******************************/
-
-  .experiences {
-    display: flex;
-    /* flex-flow: column; */
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .experience-img,
-  .experience-text {
-    width: 100%;
-    margin: 0;
-  }
-
-  /**********************  Desktop Calming page *****************************/
-
-  .oils {
-    width: 100%;
-    margin: var(--mtb);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .oils .oil {
-    width: 27%;
-  }
-
   /******************  Desktop Footer *****************/
 
   .footer {
@@ -1900,180 +1723,16 @@ footer ul {
     margin-top: 0;
   }
 
-  /******************* Desktop Create Soap Html *********************/
-
-  #form-mobile {
-    display: none;
-  }
-
-  #form-desktop {
-    display: flex;
-  }
-
-  .form-create-soap-desktop {
-    display: flex;
-    flex-flow: row;
-    align-items: flex-start;
-    gap: 4rem;
-    width: 100%;
-  }
-
-  .ingredients {
-    padding: 0;
-  }
+  /***************************************************************/
 
   .bag-image,
   .bag-description,
-  .description {
+  .description,
+  .image-thumbs {
     width: 50%;
   }
 
-  .list-items,
-  .list-experiences,
-  .list-color-shape {
-    margin: var(--mtb-large);
-  }
-
-  .icon-item,
-  .icon-text {
-    padding: var(--p);
-    width: 48px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .icon-item {
-    height: 48px;
-    background-color: var(--white);
-    color: var(--white);
-    border-radius: var(--border-radius);
-  }
-
-  /************** Desktop Form Select Color, Shape, Note  ****************************/
-
-  /* Hide the browser's default checkbox */
-  .label-color input,
-  .label-shape input,
-  .label-note input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  /* Create a custom checkbox */
-  .label-color .purple {
-    background-color: #695192;
-    cursor: pointer;
-    opacity: 1;
-  }
-  /* On mouse-over, add a inner shadow */
-  .label-color:hover input ~ .purple {
-    /* background-color: #ccc; */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
-  }
-  /* When the checkbox is checked, add a blue background */
-  .label-color input:checked ~ .purple {
-    background-color: #695192;
-  }
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .purple:after,
-  .circle:after,
-  .note:after {
-    content: "";
-    display: none;
-  }
-  /* Show the checkmark when checked */
-  .label-color input:checked ~ .purple:after,
-  .label-shape input:checked ~ .circle:after,
-  .label-note input:checked ~ .note:after {
-    display: block;
-  }
-  /* Style the checkmark/indicator */
-  .label-color .purple:after,
-  .label-shape .circle:after,
-  .label-note .note:after {
-    width: 5px;
-    height: 10px;
-    border: solid var(--green);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    z-index: 1;
-  }
-
-  /******************  Desktop Form Select Shape ************************************/
-
-  /* Create a custom checkbox */
-  .label-shape .circle,
-  .label-note .note {
-    /* background-color: #695192; */
-    cursor: pointer;
-    opacity: 1;
-  }
-
-  /* On mouse-over, add a inner shadow */
-  .label-shape:hover input ~ .circle {
-    /* background-color: #ccc; */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
-  }
-
-  /**************  Form Select Note  ****************************/
-
-  /* On mouse-over, add a inner shadow */
-  .label-note:hover input ~ .note {
-    box-shadow: inset 0px 0px 0px 1px var(--beige);
-  }
-  /* When the checkbox is checked, add a blue background */
-  .label-note input:checked ~ .note {
-    box-shadow: inset 0px 0px 0px 2px var(--green);
-  }
-
-  /******************************************************/
-
-  .list-experiences li {
-    padding: 0.5rem 1.5rem;
-  }
-
-  .oils-selected {
-    justify-content: flex-start;
-  }
-
-  .color-shape {
-    position: relative;
-    display: inline-flex;
-    width: 100%;
-    flex-flow: row;
-    justify-content: space-between;
-  }
-
-  .color,
-  .shape {
-    position: absolute;
-    z-index: 1;
-    /* margin-top: -300px; */
-    bottom: 0;
-    color: var(--white);
-    margin: var(--m);
-  }
-
-  .color {
-    left: 0;
-  }
-
-  .shape {
-    right: 0;
-  }
-
-  .list-color-shape .shape-img {
-    background-size: 65%;
-  }
-
-  /***********  Desktop Product.html page > Using Create Soap **********************/
+  /***********  Desktop Product.html page **********************/
 
   #product {
     width: 100%;
