@@ -49,7 +49,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-h);
+  font-family: var(--font-t);
   line-height: normal;
   margin: var(--mb);
 }
@@ -238,7 +238,7 @@ a.mainmenu:active {
 
 #ani-text-1,
 #ani-text-2 {
-  width: 100%;
+  /* width: 100%; */
   padding: var(--ptb);
   display: flex;
   justify-content: center;
@@ -344,6 +344,32 @@ a.mainmenu:active {
 .sustainability-home-img img {
   width: 100%;
 }
+
+/****************   Mobile Sustainability page   *******************************************/
+
+.responsibility,
+.materials {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-flow: column;
+  width: 100%;
+}
+
+.working,
+.water,
+.shipping {
+  display: flex;
+  flex-flow: column;
+  /* width: 100%; */
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--plr);
+  text-align: left;
+}
+
+/*********************************************************/
 
 .calming {
   background-color: var(--green);
@@ -573,7 +599,7 @@ a.pro-home:hover {
   align-content: center;
 
   width: 100%;
-  height: 320px;
+  height: 290px;
   background-image: url("../images/circular_economy-01.png");
   background-position: center;
   background-repeat: none;
@@ -1063,10 +1089,11 @@ a.add-to-wishlist:link {
   color: var(--black);
   text-decoration: none;
   font-size: 2rem;
-  border: 1px solid var(--black);
+  /* border: 1px solid var(--black); */
   padding: 10px 10px;
   border-radius: 100%;
   line-height: 0;
+  background-color: var(--blue);
 }
 
 .icons-sustainability .icon {
@@ -1260,7 +1287,7 @@ a.sustainability-home:active {
 .shipping {
   display: flex;
   flex-flow: column;
-  width: 100%;
+  /* width: 100%; */
   justify-content: flex-start;
   align-items: center;
   padding: var(--plr);
