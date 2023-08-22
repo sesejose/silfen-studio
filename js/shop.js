@@ -1,4 +1,4 @@
-const url = "https://grapixmo.com/silfen/wp-json/wp/v2/bag?_embed";
+const url = "https://silfen.grapixmo.com/wp-json/wp/v2/bag?_embed";
 
 fetch(url)
   .then((response) => {
