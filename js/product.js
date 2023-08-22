@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-const url = "http://www.sesejose.com/kea/wp_silfen/wp-json/wp/v2/bag/" + id + "?_embed";
+const url = "http://grapixmo.com/kea/wp_silfen/wp-json/wp/v2/bag/" + id + "?_embed";
 
 console.log("url");
 
