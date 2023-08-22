@@ -1,4 +1,4 @@
-const url = "https://sesejose.com/kea/wp_silfen/wp-json/wp/v2/bag?_embed";
+const url = "http://sesejose.com/kea/wp_silfen/wp-json/wp/v2/bag?_embed";
 
 fetch(url)
   .then((response) => {
