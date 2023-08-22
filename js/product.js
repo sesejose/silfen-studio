@@ -1,8 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-const url =
-  "http://sesejose.com/kea/wp_silfen/wp-json/wp/v2/bag/" + id + "?_embed";
+const url = "https://sesejose.com/kea/wp_silfen/wp-json/wp/v2/bag/" + id + "?_embed";
 
 console.log("url");
 
@@ -29,26 +28,17 @@ function showBag(bag) {
   document.querySelector(".name").textContent = bag.title.rendered;
   document.querySelector(".price").textContent = bag.price;
   document.querySelector(".bag-image img").src = bag.thumb1.guid;
-  document.querySelector(".excerpt-product p").textContent =
-    bag.excerpt.rendered;
+  document.querySelector(".excerpt-product p").textContent = bag.excerpt.rendered;
   document.querySelector(".material").textContent = bag.material;
   document.querySelector(".dimensions").textContent = bag.dimensions;
 
-  document.querySelector(
-    "ul.thumbs li:first-child"
-  ).style.backgroundImage = `url(${bag.thumb1.guid})`;
+  document.querySelector("ul.thumbs li:first-child").style.backgroundImage = `url(${bag.thumb1.guid})`;
 
-  document.querySelector(
-    "ul.thumbs li:nth-child(2)"
-  ).style.backgroundImage = `url(${bag.thumb2.guid})`;
+  document.querySelector("ul.thumbs li:nth-child(2)").style.backgroundImage = `url(${bag.thumb2.guid})`;
 
-  document.querySelector(
-    "ul.thumbs li:nth-child(3)"
-  ).style.backgroundImage = `url(${bag.thumb3.guid})`;
+  document.querySelector("ul.thumbs li:nth-child(3)").style.backgroundImage = `url(${bag.thumb3.guid})`;
 
-  document.querySelector(
-    "ul.thumbs li:last-child"
-  ).style.backgroundImage = `url(${bag.thumb4.guid})`;
+  document.querySelector("ul.thumbs li:last-child").style.backgroundImage = `url(${bag.thumb4.guid})`;
 
   const colors = bag._embedded["wp:term"][1]; //Define the variable colors
   if (colors.length) {

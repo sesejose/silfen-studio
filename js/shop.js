@@ -1,4 +1,4 @@
-const url = "http://sesejose.com/kea/wp_silfen/wp-json/wp/v2/bag?_embed";
+const url = "https://sesejose.com/kea/wp_silfen/wp-json/wp/v2/bag?_embed";
 
 fetch(url)
   .then((response) => {
@@ -24,17 +24,11 @@ function showBag(bag) {
 
   // copy.querySelector(".test").src = bag.thumb1.guid;
 
-  copy.querySelector(
-    ".product-img-shop a"
-  ).style.backgroundImage = `url(${bag.thumb1.guid})`;
+  copy.querySelector(".product-img-shop a").style.backgroundImage = `url(${bag.thumb1.guid})`;
 
-  copy
-    .querySelector(".product-img-shop a")
-    .setAttribute("href", `product.html?id=${bag.id}`);
+  copy.querySelector(".product-img-shop a").setAttribute("href", `product.html?id=${bag.id}`);
 
-  copy
-    .querySelector(".price-add-to-card a")
-    .setAttribute("href", `product.html?id=${bag.id}`);
+  copy.querySelector(".price-add-to-card a").setAttribute("href", `product.html?id=${bag.id}`);
 
   const colors = bag._embedded["wp:term"][1]; //Define the variable colors
   if (colors.length) {

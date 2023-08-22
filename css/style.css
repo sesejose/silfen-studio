@@ -52,6 +52,7 @@ h4 {
   font-family: var(--font-t);
   line-height: normal;
   margin: var(--mb);
+  font-weight: 500;
 }
 
 p {
@@ -307,11 +308,11 @@ a.mainmenu:active {
 }
 
 .sustainability-hero {
-  background-image: url("../images/sustainability-hero.JPG");
+  background-image: url("../images/sustainability-hero.jpg");
 }
 
 .membership-hero {
-  background-image: url("../images/card-home.JPG");
+  background-image: url("../images/card-membership.jpg");
 }
 
 .blue-bg {
@@ -483,6 +484,7 @@ a.mainmenu:active {
 .links-black {
   color: var(--yellow);
   background-color: var(--black);
+  margin: 0 auto;
 }
 
 .links-blue {
@@ -493,6 +495,7 @@ a.mainmenu:active {
 .links {
   background-color: var(--green);
   color: var(--black);
+  margin: 0 auto;
 }
 
 .m-auto {
@@ -565,7 +568,8 @@ section h1 {
   margin-bottom: 2rem;
 }
 
-.headline {
+.headline,
+.headline-sustainability {
   display: flex;
   flex-flow: column;
   /* width: 100%; */
@@ -1061,7 +1065,7 @@ a.add-to-wishlist:link {
   justify-content: center;
   text-align: center;
   gap: 2rem;
-  /* width: 100%; */
+  width: 100%;
 }
 
 #shop-grid {
@@ -1157,8 +1161,8 @@ ul.thumbs {
 }
 
 ul.thumbs li {
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   list-style: none;
   margin: var(--mlr);
   border: 1px solid var(--blue);
@@ -1425,6 +1429,10 @@ footer ul {
 
   .headline {
     width: 50%;
+  }
+
+  .headline-sustainability {
+    width: 80%;
   }
 
   /************ Desktop Products Home *******************************/
